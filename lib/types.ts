@@ -79,7 +79,7 @@ export interface ArtistCardProps {
 
 export interface SupportButtonProps {
   artistId: string;
-  variant?: 'oneTime' | 'subscribe';
+  variant?: 'one-time' | 'subscription';
   amount?: number;
   onSupport?: (artistId: string, amount: number, type: 'one-time' | 'subscription') => void;
 }

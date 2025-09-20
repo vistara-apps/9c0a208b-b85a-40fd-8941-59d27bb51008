@@ -2,16 +2,11 @@
 
 import { useState } from 'react';
 import { Search, Bell, User, Menu, X } from 'lucide-react';
-import { useMiniKit } from '@coinbase/minikit';
-import { useAuthenticate } from '@coinbase/onchainkit/minikit';
-
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const { context } = useMiniKit();
-  const { user } = useAuthenticate();
 
-  const displayName = context?.user?.displayName ?? user?.username ?? 'Music Lover';
+  const displayName = 'Music Lover';
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-white/20">

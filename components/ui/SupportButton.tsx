@@ -6,16 +6,16 @@ import { SupportButtonProps } from '@/lib/types';
 import { SUPPORT_TIERS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
-export function SupportButton({ 
-  artistId, 
-  variant = 'oneTime',
+export function SupportButton({
+  artistId,
+  variant = 'one-time',
   amount,
-  onSupport 
+  onSupport
 }: SupportButtonProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedAmount, setSelectedAmount] = useState(amount || 3);
 
-  const tiers = variant === 'oneTime' ? SUPPORT_TIERS.oneTime : SUPPORT_TIERS.subscription;
+  const tiers = variant === 'one-time' ? SUPPORT_TIERS.oneTime : SUPPORT_TIERS.subscription;
 
   const handleSupport = (supportAmount: number) => {
     onSupport?.(artistId, supportAmount, variant);
@@ -28,18 +28,18 @@ export function SupportButton({
         onClick={() => setIsOpen(true)}
         className={cn(
           "flex items-center space-x-2 px-4 py-2 rounded-md font-medium transition-all duration-200",
-          variant === 'oneTime'
+          variant === 'one-time'
             ? "bg-accent text-white hover:opacity-90"
             : "bg-primary text-white hover:opacity-90"
         )}
       >
-        {variant === 'oneTime' ? (
+        {variant === 'one-time' ? (
           <DollarSign className="w-4 h-4" />
         ) : (
           <Heart className="w-4 h-4" />
         )}
         <span>
-          {variant === 'oneTime' ? 'Support Artist' : 'Subscribe'}
+          {variant === 'one-time' ? 'Support Artist' : 'Subscribe'}
         </span>
       </button>
     );
@@ -50,7 +50,7 @@ export function SupportButton({
       <div className="absolute bottom-full left-0 mb-2 w-80 bg-white rounded-lg shadow-modal border border-border p-4 z-50">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-semibold text-gray-900">
-            {variant === 'oneTime' ? 'Support Artist' : 'Subscribe to Artist'}
+            {variant === 'one-time' ? 'Support Artist' : 'Subscribe to Artist'}
           </h3>
           <button
             onClick={() => setIsOpen(false)}
@@ -96,8 +96,8 @@ export function SupportButton({
           onClick={() => handleSupport(selectedAmount)}
           className="w-full bg-primary text-white py-3 rounded-md font-medium hover:opacity-90 transition-opacity duration-200"
         >
-          {variant === 'oneTime' 
-            ? `Support with $${selectedAmount}` 
+          {variant === 'one-time'
+            ? `Support with $${selectedAmount}`
             : `Subscribe for $${selectedAmount}/month`
           }
         </button>
