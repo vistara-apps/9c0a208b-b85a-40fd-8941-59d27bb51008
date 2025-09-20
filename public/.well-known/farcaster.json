@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "SoundSync",
+    "subtitle": "Built with Zara",
+    "description": "SoundSync is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://9c0a208bb85a40fd894159d27bb51008-28rh.vercel.app",
+    "splashImageUrl": "https://9c0a208bb85a40fd894159d27bb51008-28rh.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://9c0a208bb85a40fd894159d27bb51008-28rh.vercel.app/image.png",
+    "tagline": "SoundSync",
+    "screenshotUrls": [
+      "https://9c0a208bb85a40fd894159d27bb51008-28rh.vercel.app/screenshot.png",
+      "https://9c0a208bb85a40fd894159d27bb51008-28rh.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://9c0a208bb85a40fd894159d27bb51008-28rh.vercel.app/api/webhook"
+  }
+}
